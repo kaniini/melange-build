@@ -32,7 +32,7 @@ jobs:
       - uses: docker/login-action@bb984efc561711aaa26e433c32c3521176eae55b # v1.13.0
         with:
           registry: ghcr.io
-          username: ${{ github.username }}
+          username: ${{ github.repository_owner }}
           password: ${{ github.token }}
 
       - shell: bash
