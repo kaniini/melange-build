@@ -1,0 +1,23 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - '@local /github/workspace/packages'
+  packages:
+    - alpine-baselayout-data
+    - hello@local
+
+entrypoint:
+  command: /usr/bin/hello
+
+accounts:
+  groups:
+    - groupname: nonroot
+      gid: 10000
+  users:
+    - username: nonroot
+      uid: 10000
+  run-as: nonroot
+
+# optional environment configuration
+environment:
+  PATH: /usr/sbin:/sbin:/usr/bin:/bin
