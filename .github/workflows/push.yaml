@@ -20,6 +20,6 @@ jobs:
           sign-with-temporary-key: true
       - uses: chainguard-dev/actions/apko-build@feature/apko-build-keyring-append
         with:
-          tag: ${{ github.repository }}:latest
+          tag: ghcr.io/${{ github.repository }}:latest
           keyring-append: /github/workspace/melange.rsa.pub
           archs: x86_64
